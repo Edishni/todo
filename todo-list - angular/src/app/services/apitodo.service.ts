@@ -26,6 +26,7 @@ export class ApitodoService {
     }
   
     editToDo(newToDo: ToDo): Observable<ToDo> {
+      console.log(newToDo.id);
       return this.http.put<ToDo>(`${environment.apiToDo}/${newToDo.id}`, newToDo)
     }
   

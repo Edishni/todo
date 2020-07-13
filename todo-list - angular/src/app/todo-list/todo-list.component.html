@@ -31,6 +31,7 @@
       </div>
 
       <button [disabled]="addForm.invalid">ADD TASK</button>
+      <button *ngIf="ifeditTask" (click)="saveChanges()">EDIT TASK</button>
       
       <div *ngIf="invalidLogin" class="error">
         <div>Invalid credentials.</div>
@@ -43,7 +44,7 @@
 
     <div class="todocard" *ngFor="let task of taskList, let i=index">
       
-        <h4>{{task.taskName}}</h4>    
+        <h4>{{task.id}} - {{task.taskName}}</h4>    
         <p> {{task.description}} </p>
         <p> {{task.data}} </p>
      

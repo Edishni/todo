@@ -10,8 +10,10 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class TodoListComponent implements OnInit {
   taskList: ToDo[];
+  taskForEdit:ToDo;
   addForm;
   invalidLogin: boolean = false;
+  ifeditTask: boolean = false;
   constructor(private formBuilder: FormBuilder, public apilist: ApitodoService) { }
 
   loadTaskList() {
@@ -24,7 +26,17 @@ export class TodoListComponent implements OnInit {
       console.log(data)
     });
     this.loadTaskList(); 
-    
+  }
+
+  editTask(editTask : ToDo){
+    /* this.apilist.editToDo(editTask); */
+    this.addForm = this.formBuilder.group({
+      taskName: [editTask.taskName, Validators.compose([Validators.required])],
+      description: [editTask.description, Validators.required],
+      data: [editTask.data, Validators.required],
+    });
+    this.taskForEdit=editTask;
+    this.ifeditTask=true;
   }
 
   onSubmit() {
@@ -38,6 +50,21 @@ export class TodoListComponent implements OnInit {
     }
 
     this.apilist.addToDo(task).subscribe(data => {
+      console.log(data)
+    });
+    this.loadTaskList();
+  }
+
+  saveChanges() {
+
+     const task2: ToDo = {
+       id:this.taskForEdit.id,
+      taskName: this.addForm.controls.taskName.value,
+      description: this.addForm.controls.description.value,
+      data: this.addForm.controls.data.value,
+    }
+
+    this.apilist.editToDo(task2).subscribe(data => {
       console.log(data)
     });
     this.loadTaskList();
