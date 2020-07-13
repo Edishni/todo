@@ -1,0 +1,23 @@
+.grid-container ,.formfield{
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-rows: 1fr;
+    gap: 1px 1px;
+    grid-template-areas: ". .";
+  }
+  h1{
+      text-align: center;
+  }
+  .todocard{
+      display: inline-block;
+      width: 200px;
+      border: 2px solid green;
+      background-color: greenyellow;
+      margin: 10px;
+      padding: 5px;
+  }
+  button{
+      margin: 5px;
+      padding: 5px;
+      background-color: hotpink;
+  }
