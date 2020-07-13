@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Edi\\source\\repos\\WebApplication11\\WebApplication11.csproj": {}
+    "C:\\C_sharp_Angular\\TODO\\TODOLIST - server\\WebApplication11.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Edi\\source\\repos\\WebApplication11\\WebApplication11.csproj": {
+    "C:\\C_sharp_Angular\\TODO\\TODOLIST - server\\WebApplication11.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Edi\\source\\repos\\WebApplication11\\WebApplication11.csproj",
+        "projectUniqueName": "C:\\C_sharp_Angular\\TODO\\TODOLIST - server\\WebApplication11.csproj",
         "projectName": "WebApplication11",
-        "projectPath": "C:\\Users\\Edi\\source\\repos\\WebApplication11\\WebApplication11.csproj",
+        "projectPath": "C:\\C_sharp_Angular\\TODO\\TODOLIST - server\\WebApplication11.csproj",
         "packagesPath": "C:\\Users\\Edi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Edi\\source\\repos\\WebApplication11\\obj\\",
+        "outputPath": "C:\\C_sharp_Angular\\TODO\\TODOLIST - server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

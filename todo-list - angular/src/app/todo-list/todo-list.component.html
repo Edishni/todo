@@ -3,8 +3,8 @@
 <div class="grid-container">
 
   <div class="formfield">
-    <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
-
+    <form [formGroup]="addForm" >
+<!-- (ngSubmit)="onSubmit()" -->
       <div class="form-group">
         <label for="taskName">Task Name:</label>
         <input type="text" class="form-control" formControlName="taskName" id="taskName" autocomplete="off">
@@ -30,7 +30,7 @@
           date is required</div>
       </div>
 
-      <button [disabled]="addForm.invalid">ADD TASK</button>
+      <button [disabled]="addForm.invalid" (click)="onSubmit()">ADD TASK</button>
       <button *ngIf="ifeditTask" (click)="saveChanges()">EDIT TASK</button>
       
       <div *ngIf="invalidLogin" class="error">

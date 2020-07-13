@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eKEhb8skfT6MZkmoAkf3PDyIPc8VhqWF3PLeVsgOM24NFe1tiEo4IJhxLJerfWtItoli4cEcvP6PZcLUcwhUZQ==",
+  "dgSpecHash": "VjnAd4bJ4gQV5vPdgtb2HUw7qmLAZ+U/cRelmmWx6mT9KAFnX6QYHtqDgLm1RJymhmegTksMJMQEHXa0xFCTIw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Edi\\source\\repos\\WebApplication11\\WebApplication11.csproj",
+  "projectFilePath": "C:\\C_sharp_Angular\\TODO\\TODOLIST - server\\WebApplication11.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Edi\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.6\\microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",
     "C:\\Users\\Edi\\.nuget\\packages\\microsoft.aspnetcore\\2.1.1\\microsoft.aspnetcore.2.1.1.nupkg.sha512",
