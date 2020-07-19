@@ -19,13 +19,18 @@ export class TodoListComponent implements OnInit {
   loadTaskList() {
     setTimeout(function () { console.log('loading...'); }, 4000);
     this.apilist.getAll().subscribe(data => this.taskList = data);
+
+
   }
 
   delTask(task: ToDo) {
     this.apilist.deleteToDo(task.id).subscribe(data => {
       console.log(data)
+      this.taskList = this.taskList.filter(ele => ele.id != data.id)
+
+
     });
-    this.loadTaskList();
+    // this.ngOnInit(); ///// לא עושים דברים כאלה !!!!!
   }
 
   editTask(editTask: ToDo) {
@@ -50,8 +55,9 @@ export class TodoListComponent implements OnInit {
     }
     this.apilist.addToDo(task).subscribe(data => {
       console.log(data)
+      this.taskList.push(data)
     });
-    this.loadTaskList();
+    // this.ngOnInit();
   }
 
   saveChanges() {
@@ -61,10 +67,13 @@ export class TodoListComponent implements OnInit {
       description: this.addForm.controls.description.value,
       data: this.addForm.controls.data.value,
     }
+    console.log(task2)
     this.apilist.editToDo(task2).subscribe(data2 => {
-      console.log(data2)
+      this.taskList = this.taskList.filter(ele => ele.id != task2.id)
+      console.log(this.taskList)
+      this.taskList.push(task2)
     });
-    this.loadTaskList();
+    // this.ngOnInit();
   }
 
   ngOnInit(): void {
